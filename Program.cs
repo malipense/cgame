@@ -1,17 +1,16 @@
 ﻿using cgame;
 
 ConfigureConsole();
-Main main = new Main(Console.Out);
+Main main = new Main(Console.Out, Console.In);
 main.Start();
 
 while(true)
 {
-    Console.ReadLine();
+    main.Update();
 }
 
 void ConfigureConsole()
 {
     CustomConsole customConsole = new CustomConsole();
-    customConsole.SetConsoleFont();
+    customConsole.SetConsole();
 }
-Console.WriteLine("Hello, World!");
